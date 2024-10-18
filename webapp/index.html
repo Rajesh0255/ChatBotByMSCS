@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chat Bot</title>
+    <style>
+        html, body, body > div, #container, #container-uiarea {
+            height: 100%;
+            margin: 0; /* Ensure there's no default margin */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove default border */
+        }
+    </style>
+    <script
+        id="sap-ui-bootstrap"
+        src="resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-resourceroots='{
+            "com.app.chatbot": "./"
+        }'
+        data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-frameOptions="trusted"
+    ></script>
+</head>
+<body class="sapUiBody sapUiSizeCompact" id="content">
+    <div
+        data-sap-ui-component
+        data-name="com.app.chatbot"
+        data-id="container"
+        data-settings='{"id" : "com.app.chatbot"}'
+        data-handle-validation="true">
+        
+        <iframe 
+            src="https://copilotstudio.microsoft.com/environments/3bd0c546-3479-ee37-947a-994cb68f12d3/bots/cre6d_copilot1/webchat?__version__=2"
+            frameborder="0"
+            style="overflow: hidden;">
+        </iframe>
+    </div>
+</body>
+</html>
